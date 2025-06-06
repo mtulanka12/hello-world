@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickMenu - Digital Menu Creator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>QuickMenu</h1>
+        <p>Create your beautiful, mobile-friendly digital menu in minutes.</p>
+    </header>
+
+    <main>
+        <section id="menu-builder">
+            <h2>Build Your Menu</h2>
+            <!-- Form elements for adding categories and items will go here -->
+            <div id="categories-container">
+                <!-- Categories will be added here -->
+            </div>
+            <button id="add-category-btn">Add Category</button>
+        </section>
+
+        <section id="live-preview">
+            <h2>Live Preview</h2>
+            <div id="preview-content">
+                <!-- The live menu will be displayed here -->
+                <p>Your menu will appear here as you build it.</p>
+            </div>
+        </section>
+
+        <section id="generate-section">
+            <h2>Generate Your Menu</h2>
+            <button id="generate-menu-btn">Generate My Menu</button>
+            <div id="output-link-container" style="display: none;">
+                <h3>Your Menu Link:</h3>
+                <input type="text" id="menu-url-output" readonly>
+                <button id="download-qr-btn">Download QR Code</button>
+                <div id="qr-code-container">
+                    <!-- QR code will be displayed here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; QuickMenu - Simple, Elegant, Free.</p>
+    </footer>
+
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,292 @@
+/* Reset and Base Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Lighter background */
+    color: #343a40; /* Darker text for better contrast */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background: #343a40; /* Darker header */
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+header h1 {
+    margin-bottom: 0.25rem;
+    font-size: 2.5rem;
+}
+header p {
+    font-size: 1.1rem;
+    color: #e9ecef; /* Lighter paragraph text */
+}
+
+/* Main Content Layout */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust spacing */
+    padding: 2rem 0; /* Main padding vertical */
+    flex-grow: 1;
+}
+
+section {
+    background: #fff;
+    padding: 2rem; /* Increased padding */
+    margin-bottom: 2rem; /* Increased margin */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Softer shadow */
+    width: 100%; /* Default to full width, adjust below */
+}
+
+#menu-builder {
+    width: 100%; /* Full width on small screens */
+}
+
+#live-preview {
+    width: 100%; /* Full width on small screens */
+    margin-top: 2rem; /* Add space when stacked */
+}
+
+/* Section Specifics */
+#generate-section {
+    text-align: center;
+    background-color: #e9ecef; /* Slightly different background for emphasis */
+}
+
+h2 {
+    color: #007bff; /* Primary color for headings */
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+/* Form Elements & Buttons */
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Increased padding */
+    margin-bottom: 1rem; /* Increased margin */
+    border: 1px solid #ced4da; /* Softer border */
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+textarea {
+    min-height: 80px;
+}
+
+button, .button { /* Added .button class for general use if needed */
+    background-color: #007bff; /* Primary button color */
+    color: white;
+    border: none;
+    padding: 12px 20px; /* Increased padding */
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    margin-top: 0.5rem;
+    display: inline-block; /* Ensure proper spacing */
+}
+button:hover, .button:hover {
+    background-color: #0056b3; /* Darker on hover */
+}
+
+#add-category-btn {
+    background-color: #28a745; /* Green for add */
+}
+#add-category-btn:hover {
+    background-color: #1e7e34;
+}
+
+.remove-category-btn, .remove-item-btn {
+    background-color: #dc3545; /* Red for remove */
+    font-size: 0.9rem;
+    padding: 8px 12px;
+}
+.remove-category-btn:hover, .remove-item-btn:hover {
+    background-color: #c82333;
+}
+
+/* Menu Builder Structure */
+.category {
+    border: 1px solid #e9ecef;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+}
+.category input[type="text"] { /* Category name input */
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.items-container {
+    margin-top: 1rem;
+    padding-left: 1rem; /* Indent items */
+    border-left: 3px solid #007bff;
+}
+
+.item {
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed #ced4da;
+}
+.item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+.item input[type="text"], .item textarea, .item input[type="number"] {
+    margin-bottom: 0.5rem; /* Tighter spacing within item */
+}
+
+
+/* Live Preview Styling */
+#preview-content {
+    border: 1px solid #e9ecef;
+    padding: 1.5rem;
+    min-height: 150px;
+    background-color: #fff;
+    border-radius: 6px;
+}
+
+.preview-category {
+    margin-bottom: 1.5rem;
+}
+.preview-category h3 { /* Category titles in preview */
+    font-size: 1.6rem;
+    color: #343a40;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.preview-items-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.preview-item {
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #f1f1f1; /* Lighter item separator */
+}
+.preview-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.preview-item strong { /* Item name */
+    font-size: 1.1rem;
+    color: #495057;
+}
+
+.preview-item-price {
+    font-weight: bold;
+    color: #28a745; /* Green for price */
+    margin-left: 8px;
+    font-size: 1.1rem;
+}
+
+.preview-item-description {
+    font-size: 0.95rem;
+    color: #6c757d; /* Muted description color */
+    margin-top: 0.4rem;
+    padding-left: 0; /* No extra indent needed if item name is prominent */
+    line-height: 1.5;
+}
+
+/* Generate Section */
+#output-link-container {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+}
+#menu-url-output {
+    width: calc(100% - 180px); /* Adjust width based on button */
+    margin-right: 10px;
+    padding: 12px;
+    font-size: 0.9rem;
+    background-color: #e9ecef; /* Indicate readonly */
+    display: inline-block; /* Align with button */
+    vertical-align: middle;
+}
+#download-qr-btn {
+    background-color: #17a2b8; /* Info color for QR download */
+    vertical-align: middle;
+}
+#download-qr-btn:hover {
+    background-color: #117a8b;
+}
+#qr-code-container {
+    margin-top: 1.5rem;
+    padding: 10px; /* Padding around QR code */
+    background: white;
+    display: inline-block; /* To center it if text-align center is on parent */
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+#qr-code-container img { /* qrcode.js often generates an img */
+    display: block; /* Remove extra space below img */
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background: #343a40;
+    color: #fff;
+    margin-top: auto; /* Pushes footer to bottom */
+}
+
+/* Responsive Design - Media Queries */
+@media (min-width: 768px) { /* Tablets and up */
+    .container {
+        width: 85%;
+    }
+    #menu-builder {
+        width: 48%; /* Side-by-side layout */
+    }
+    #live-preview {
+        width: 48%; /* Side-by-side layout */
+        margin-top: 0; /* Reset margin when side-by-side */
+    }
+    header h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 992px) { /* Desktops */
+    .container {
+        width: 80%;
+    }
+     header h1 {
+        font-size: 3.5rem;
+    }
+}
+
+/* Accessibility improvements */
+button:focus, input:focus, textarea:focus {
+    outline: 2px solid #0056b3;
+    outline-offset: 2px;
+}
